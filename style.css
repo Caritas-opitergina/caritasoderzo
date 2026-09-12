@@ -162,6 +162,11 @@ section.band {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+dbox-widget {
+  display: block;
+  max-width: 480px;
+  margin-top: 8px;
+}
 .section-head { max-width: 620px; margin-bottom: 28px; }
 
 /* Service list (not identical cards — a real list with dividers) */
