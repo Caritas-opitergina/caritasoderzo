@@ -3,6 +3,7 @@ title: Caritas opitergina
 tagline: Centro di Ascolto ODV
 description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concreti e case per chi vive un momento di difficoltà a Oderzo, Fontanelle, Mansuè e Portobuffolè."
 url: https://caritasoderzo.org
+author: Caritas opitergina
 lang: it_IT
 timezone: Europe/Rome
 
@@ -15,6 +16,7 @@ defaults:
   - scope: { path: "", type: posts }
     values:
       permalink: /notizie/:year-:month-:day-:title.html
+      layout: post
 
 plugins:
   - jekyll-feed

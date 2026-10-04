@@ -505,3 +505,5 @@ footer.site .legal {
 .privacy li { margin-bottom: 0.5em; }
 footer.site .legal a { color: inherit; }
 .privacy .wrap > h2:first-child { margin-top: 0; }
+.cs-article .cs-body ul:not(.cs-data) { padding-left: 1.2em; margin: 0 0 1.3em; }
+.cs-article .cs-body ul:not(.cs-data) li { margin-bottom: 0.6em; line-height: 1.6; }
