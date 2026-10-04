@@ -1,0 +1,56 @@
+---
+layout: default
+title: Video
+description: "Servizi televisivi e video che raccontano il lavoro di Caritas opitergina – Centro di Ascolto ODV a Oderzo."
+---
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <h1>Video</h1>
+    <p class="lead">Servizi e video che raccontano il nostro lavoro.</p>
+  </div>
+</section>
+
+<section style="padding-top: 8px;">
+  <div class="wrap">
+    <p class="small-note video-note">I video di YouTube si caricano solo quando premi "Guarda": fino a quel momento la pagina non si collega a YouTube.</p>
+    <div class="video-grid">
+      {%- for v in site.data.video %}
+      <article class="video-card">
+        {%- if v.id %}
+        <div class="video-frame" data-id="{{ v.id }}">
+          <button type="button" class="video-play" aria-label="Guarda il video: {{ v.titolo | escape }}">
+            <span class="video-icon" aria-hidden="true">▶</span>
+            <span class="video-label">Guarda</span>
+          </button>
+        </div>
+        {%- else %}
+        <div class="video-frame">
+          <a class="video-out" href="{{ v.link }}" target="_blank" rel="noopener">
+            <span class="video-icon" aria-hidden="true">▶</span>
+            <span class="video-label">Guarda su {{ v.fonte }}</span>
+          </a>
+        </div>
+        {%- endif %}
+        <h2>{{ v.titolo }}</h2>
+        {%- if v.descrizione != "" %}<p>{{ v.descrizione }}</p>{% endif %}
+        {%- if v.id %}<p class="small-note"><a href="https://www.youtube.com/watch?v={{ v.id }}" target="_blank" rel="noopener">Apri su YouTube</a></p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.video-frame[data-id] .video-play').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var box = btn.parentElement;
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + box.dataset.id + '?autoplay=1&rel=0';
+    f.title = btn.getAttribute('aria-label');
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.innerHTML = '';
+    box.appendChild(f);
+  });
+});
+</script>

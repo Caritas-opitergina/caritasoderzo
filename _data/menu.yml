@@ -1,0 +1,12 @@
+- titolo: Home
+  url: /
+- titolo: Servizi
+  url: /servizi.html
+- titolo: Borse di studio
+  url: /borse-di-studio.html
+- titolo: Notizie
+  url: /notizie.html
+- titolo: Video
+  url: /video.html
+- titolo: Contatti
+  url: /contatti.html

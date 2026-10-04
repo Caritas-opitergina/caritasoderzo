@@ -261,11 +261,6 @@ section.band {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-dbox-widget {
-  display: block;
-  max-width: 480px;
-  margin-top: 8px;
-}
 .section-head { max-width: 620px; margin-bottom: 28px; }
 
 /* Service list (not identical cards — a real list with dividers) */
@@ -457,3 +452,56 @@ footer.site .legal {
 .link-list li { border-bottom: 1px solid var(--line); padding: 14px 0; }
 .link-list a { font-weight: 600; }
 .link-list span { display: block; font-size: 0.92rem; color: var(--ink-soft); margin-top: 2px; }
+
+/* Notizie: etichetta tipo */
+.cs-entry time { display: block; }
+.cs-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brick);
+}
+
+/* Video */
+.video-note { margin-bottom: 22px; }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px 28px;
+}
+.video-card h2 { font-size: 1.15rem; margin: 12px 0 4px; }
+.video-card p { margin: 0 0 4px; }
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--pine-deep);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-play, .video-out {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; border: 0; background: transparent; cursor: pointer;
+  color: #fff; font: inherit; text-decoration: none;
+}
+.video-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 62px; height: 62px; border-radius: 50%;
+  background: var(--brick); font-size: 1.4rem; padding-left: 4px;
+}
+.video-play:hover .video-icon, .video-out:hover .video-icon { background: var(--brick-deep); }
+.video-play:focus-visible, .video-out:focus-visible { outline: 3px solid var(--ochre); outline-offset: -3px; }
+.video-label { font-weight: 600; font-size: 0.95rem; }
+
+/* Privacy */
+.privacy .wrap > * { max-width: var(--max-w); }
+.privacy h2 { margin-top: 1.6em; }
+.privacy h3 { font-size: 1.08rem; margin: 1.2em 0 0.3em; }
+.privacy ul { padding-left: 1.2em; }
+.privacy li { margin-bottom: 0.5em; }
+footer.site .legal a { color: inherit; }
+.privacy .wrap > h2:first-child { margin-top: 0; }

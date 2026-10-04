@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="hero" style="padding: 32px 0 8px;">
+  <div class="wrap">
+    <p class="back-link"><a href="/notizie.html">← Tutte le notizie</a></p>
+  </div>
+</section>
+
+<section style="padding-top: 8px;">
+  <div class="wrap">
+    <article class="cs-article">
+      <p class="cs-meta">{{ page.tipo | default: "Approfondimento" }} — Oderzo, {% include data-it.html data=page.date %}</p>
+      <h1>{{ page.title }}</h1>
+      <div class="cs-body">
+      {{ content }}
+      </div>
+      <p class="cs-sign">Caritas opitergina – Centro di Ascolto Oderzo ODV<span>Per una comunità accogliente, giusta e solidale</span></p>
+    </article>
+  </div>
+</section>
+{% if page.tipo == "Comunicato stampa" %}
+<section>
+  <div class="wrap">
+    <div class="press-box">
+      <h2>Contatti per la stampa</h2>
+      <p>Per richieste di informazioni o interviste scrivete a <a href="mailto:caritasoderzo@gmail.com">caritasoderzo@gmail.com</a>. I testi dei comunicati possono essere ripresi citando la fonte.</p>
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Notizie e approfondimenti
+description: "Comunicati stampa e approfondimenti di Caritas opitergina – Centro di Ascolto ODV di Oderzo."
+redirect_from: /comunicati.html
+---
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <h1>Notizie e approfondimenti</h1>
+    <p class="lead">Le prese di posizione pubbliche di Caritas opitergina e qualche approfondimento sul nostro lavoro e sul territorio.</p>
+  </div>
+</section>
+
+<section style="padding-top: 8px;">
+  <div class="wrap">
+    <div class="cs-list">
+      {%- for post in site.posts %}
+      <article class="cs-entry">
+        <div>
+          {% include data-it.html data=post.date %}
+          <span class="cs-tag">{{ post.tipo | default: "Approfondimento" }}</span>
+        </div>
+        <div>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.sommario }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="small-note" style="margin-top: 18px;">Per seguire le novità con un lettore RSS: <a href="/feed.xml">feed delle notizie</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="press-box">
+      <h2>Contatti per la stampa</h2>
+      <p>Per richieste di informazioni o interviste scrivete a <a href="mailto:caritasoderzo@gmail.com">caritasoderzo@gmail.com</a>. I testi dei comunicati possono essere ripresi citando la fonte.</p>
+    </div>
+  </div>
+</section>

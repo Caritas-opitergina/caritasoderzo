@@ -1,0 +1,28 @@
+# Elenco dei video della pagina /video.html, dal più recente al più vecchio.
+# Per aggiungere un video YouTube basta copiare un blocco e cambiare id, titolo e descrizione.
+# L'id è la parte dopo "watch?v=" nel link di YouTube.
+# Per video che non sono su YouTube si usa "link" al posto di "id" (si apre sul sito d'origine).
+# Attenzione: se il titolo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
+
+- id: _4W4lZfhAcs
+  titolo: "Dietro ogni richiesta, una storia: il lavoro del Centro di ascolto della Caritas opitergina"
+  descrizione: "Video di QDPnews, Oderzo, 11 aprile 2026"
+- id: C2BVpL2SIX0
+  titolo: "L’impegno di Caritas opitergina nell’emergenza abitativa: le testimonianze di Kin e Abdelkader"
+  descrizione: "Video di QDPnews, Oderzo, 11 aprile 2026"
+- id: ueI6CEbCSXw
+  titolo: "Accordo tra ATER e Caritas opitergina: alloggio ad affitto calmierato a chi è in difficoltà"
+  descrizione: "Servizio di Antenna Tre Veneto, Treviso, 29 settembre 2025"
+- id: rFcHxoR13hI
+  titolo: "Camminando nelle loro scarpe: trent'anni di Centro di Ascolto"
+  descrizione: "Spettacolo per i trent'anni del CdA di Oderzo, Oderzo, 4 maggio 2024"
+- id: iT5TiFYccBw
+  titolo: "Quale futuro per l'Africa? Incontro con don Dante Carraro"
+  descrizione: "Conferenza al teatro Turroni, Oderzo, 7 ottobre 2023"
+- id: QzvfSHBAoNo
+  titolo: 'Presentazione del libro "Gesù il figlio del falegname"'
+  descrizione: "Con mons. Renato De Zan, Oderzo, 20 gennaio 2023"
+- link: https://www.rainews.it/tgr/veneto/video/2021/04/ven-Veneto-Oderzo-nuove-poverta-lavoro-della-Caritas-c90c95b4-a322-4105-8263-3dd38828c667.html
+  fonte: RaiNews – TGR Veneto
+  titolo: "Oderzo, nuove povertà: il lavoro della Caritas"
+  descrizione: "Servizio del TGR Veneto, aprile 2021."

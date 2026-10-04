@@ -1,0 +1,29 @@
+# Configurazione del sito caritasoderzo.org (Jekyll su GitHub Pages)
+title: Caritas opitergina
+tagline: Centro di Ascolto ODV
+description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concreti e case per chi vive un momento di difficoltà a Oderzo, Fontanelle, Mansuè e Portobuffolè."
+url: https://caritasoderzo.org
+lang: it_IT
+timezone: Europe/Rome
+
+# Immagine per le anteprime social (1200x630)
+defaults:
+  - scope: { path: "" }
+    values:
+      image: /assets/og-image.png
+  # Indirizzo degli articoli: /notizie/AAAA-MM-GG-titolo.html
+  - scope: { path: "", type: posts }
+    values:
+      permalink: /notizie/:year-:month-:day-:title.html
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md

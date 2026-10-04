@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+{% feed_meta %}
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/assets/logo-caritas.png" alt="Caritas opitergina" width="52" height="56">
+      <span class="wordmark">Caritas opitergina
+        <span>Centro di Ascolto ODV — Forania di Oderzo</span>
+      </span>
+    </a>
+    <nav class="main">
+      {%- for voce in site.data.menu %}
+      {%- assign attiva = false -%}
+      {%- if page.url == voce.url or page.url == voce.url | replace: '.html', '' -%}{%- assign attiva = true -%}{%- endif -%}
+      {%- if voce.url == '/' and page.url == '/index.html' -%}{%- assign attiva = true -%}{%- endif -%}
+      {%- if voce.url == '/notizie.html' and page.layout == 'post' -%}{%- assign attiva = true -%}{%- endif %}
+      <a href="{{ voce.url }}"{% if attiva %} aria-current="page"{% endif %}>{{ voce.titolo }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Caritas opitergina</h3>
+        <p>Piazzale Turroni 1<br>"Casa della Carità" — Oderzo (TV)</p>
+      </div>
+      <div>
+        <h3>Contatti</h3>
+        <p><a href="mailto:cda.oderzo@gmail.com">cda.oderzo@gmail.com</a><br>
+        <a href="https://www.whatsapp.com/channel/0029VaJ1Byk0rGiGvTWRsl16">Canale WhatsApp</a><br>
+        <a href="https://lnk.bio/caritas.oderzo">Tutti i nostri link (lnk.bio)</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap legal">
+    Caritas opitergina – Centro di Ascolto ODV · RUNTS n. 96793 · C.F. 94029790261 · <a href="/privacy.html">Privacy</a>
+  </div>
+</footer>
+
+<img src="https://tracker.metricool.com/c3po.jpg?hash=5f71d69dd3299dd5c67704bde2e16b64" alt="" style="display:none" width="1" height="1">
+<script data-goatcounter="https://caritasoderzo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
