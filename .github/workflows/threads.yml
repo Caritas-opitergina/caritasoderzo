@@ -1,0 +1,63 @@
+# Aggiorna ogni giorno i post Threads mostrati in home
+name: Aggiorna post Threads
+
+on:
+  schedule:
+    - cron: "17 5,16 * * *"   # due volte al giorno (orario UTC)
+  workflow_dispatch:           # avvio manuale da tab Actions
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: threads-sync
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa Pillow
+        run: pip install --quiet Pillow
+
+      - name: Scarica i post da Threads
+        env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+        run: python _scripts/threads_sync.py
+
+      - name: Aggiorna il secret se Meta ha dato un token nuovo
+        if: hashFiles('nuovo_token.txt') != ''
+        env:
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::Meta ha restituito un token diverso: serve il secret SECRETS_PAT per salvarlo (vedi istruzioni)."
+            rm nuovo_token.txt
+            exit 1
+          fi
+          gh secret set THREADS_TOKEN --repo "${{ github.repository }}" < nuovo_token.txt
+          rm nuovo_token.txt
+
+      - name: Pubblica se ci sono novità
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -A _data/threads.json assets/threads
+          if git diff --cached --quiet; then
+            echo "Niente da pubblicare."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Threads: aggiornati i post in home"
+          git pull --rebase
+          git push
+          # Chiede a GitHub Pages di ricostruire il sito
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
