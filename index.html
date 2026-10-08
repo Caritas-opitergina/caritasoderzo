@@ -45,18 +45,20 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
     <aside class="threads-col" aria-labelledby="threads-titolo">
       <h2 id="threads-titolo">Dai nostri canali</h2>
       {%- for p in threads_post %}
-      <article class="th-post">
+      <article class="th-post{% unless p.immagine %} senza-img{% endunless %}">
         {%- if p.immagine %}
-        <a class="th-img" href="{{ p.link }}" target="_blank" rel="noopener">
+        <a class="th-img" href="{{ p.link }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
           <img src="{{ p.immagine }}" alt="" loading="lazy">
-          {%- if p.video %}<span class="th-video">▶ Video</span>{% endif %}
+          {%- if p.video %}<span class="th-video">▶</span>{% endif %}
         </a>
         {%- endif %}
-        <p class="th-meta">{% include data-it.html data=p.data %}</p>
-        {%- if p.testo != "" %}
-        <p class="th-testo">{{ p.testo | truncate: 240 | escape | newline_to_br }}</p>
-        {%- endif %}
-        <a class="th-link" href="{{ p.link }}" target="_blank" rel="noopener">Leggi su Threads →</a>
+        <div class="th-corpo">
+          <p class="th-meta">{% include data-it.html data=p.data %}</p>
+          {%- if p.testo != "" %}
+          <p class="th-testo">{{ p.testo | truncate: 240 | escape | newline_to_br }}</p>
+          {%- endif %}
+          <a class="th-link" href="{{ p.link }}" target="_blank" rel="noopener">Leggi su Threads →</a>
+        </div>
       </article>
       {%- endfor %}
       {%- if site.data.threads.profilo != "" %}
