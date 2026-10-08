@@ -14,35 +14,55 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Chi siamo</h2>
-      <p>Siamo nati tra il 1993 e il 1994. Facciamo capo alla parrocchia di San Giovanni Battista di Oderzo e alla Caritas diocesana di Vittorio Veneto. Operiamo con 28 volontari attivi al servizio della forania di Oderzo — circa 32.000 abitanti tra Oderzo, Fontanelle, Mansuè e Portobuffolè.</p>
-      <p>Caritas opitergina – Centro di Ascolto ODV · RUNTS n. 96793 · C.F. 94029790261</p>
-    </div>
-  </div>
-</section>
+{%- assign threads_post = site.data.threads.post | slice: 0, 3 -%}
+{%- comment -%} Per mostrare 5 post invece di 3, cambiare il 3 qui sopra {%- endcomment -%}
+<section class="home-main">
+  <div class="wrap home-grid{% if threads_post.size > 0 %} con-threads{% endif %}">
+    <div class="home-col">
+      <div class="home-block">
+        <h2>Chi siamo</h2>
+        <p>Siamo nati tra il 1993 e il 1994. Facciamo capo alla parrocchia di San Giovanni Battista di Oderzo e alla Caritas diocesana di Vittorio Veneto. Operiamo con 28 volontari attivi al servizio della forania di Oderzo — circa 32.000 abitanti tra Oderzo, Fontanelle, Mansuè e Portobuffolè.</p>
+        <p>Caritas opitergina – Centro di Ascolto ODV · RUNTS n. 96793 · C.F. 94029790261</p>
+      </div>
 
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Cosa facciamo</h2>
-      <p>Dal Centro di Ascolto partono i percorsi di aiuto: distribuzione di beni essenziali, e tre case per chi ha bisogno di un tetto e di un accompagnamento verso l'autonomia.</p>
-    </div>
-    <div class="btn-row" style="margin-top:0;">
-      <a class="btn btn-ghost" href="servizi.html">Vedi tutti i servizi e gli orari →</a>
-    </div>
-  </div>
-</section>
+      <div class="home-block">
+        <h2>Cosa facciamo</h2>
+        <p>Dal Centro di Ascolto partono i percorsi di aiuto: distribuzione di beni essenziali, e tre case per chi ha bisogno di un tetto e di un accompagnamento verso l'autonomia.</p>
+        <div class="btn-row" style="margin-top:0;">
+          <a class="btn btn-ghost" href="servizi.html">Vedi tutti i servizi e gli orari →</a>
+        </div>
+      </div>
 
-<section class="band">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Sostienici</h2>
-      <p>Il nostro lavoro va avanti grazie a chi lo sostiene: con una donazione o destinandoci il 5x1000 nella dichiarazione dei redditi, indicando il nostro codice fiscale 94029790261.</p>
+      <div class="home-block home-sostieni">
+        <h2>Sostienici</h2>
+        <p>Il nostro lavoro va avanti grazie a chi lo sostiene: con una donazione o destinandoci il 5x1000 nella dichiarazione dei redditi, indicando il nostro codice fiscale 94029790261.</p>
+        <p><a class="btn btn-primary" href="https://donorbox.org/caritas-opitergina" target="_blank" rel="noopener">Dona ora</a></p>
+        <p class="small-note">La donazione si fa sulla pagina sicura di Donorbox, che si apre in una nuova scheda.</p>
+      </div>
     </div>
-    <p><a class="btn btn-primary" href="https://donorbox.org/caritas-opitergina" target="_blank" rel="noopener">Dona ora</a></p>
-    <p class="small-note">La donazione si fa sulla pagina sicura di Donorbox, che si apre in una nuova scheda.</p>
+    {%- if threads_post.size > 0 %}
+
+    <aside class="threads-col" aria-labelledby="threads-titolo">
+      <h2 id="threads-titolo">Dai nostri canali</h2>
+      {%- for p in threads_post %}
+      <article class="th-post">
+        {%- if p.immagine %}
+        <a class="th-img" href="{{ p.link }}" target="_blank" rel="noopener">
+          <img src="{{ p.immagine }}" alt="" loading="lazy">
+          {%- if p.video %}<span class="th-video">▶ Video</span>{% endif %}
+        </a>
+        {%- endif %}
+        <p class="th-meta">{% include data-it.html data=p.data %}</p>
+        {%- if p.testo != "" %}
+        <p class="th-testo">{{ p.testo | truncate: 240 | escape | newline_to_br }}</p>
+        {%- endif %}
+        <a class="th-link" href="{{ p.link }}" target="_blank" rel="noopener">Leggi su Threads →</a>
+      </article>
+      {%- endfor %}
+      {%- if site.data.threads.profilo != "" %}
+      <p class="th-segui"><a href="https://www.threads.com/@{{ site.data.threads.profilo }}" target="_blank" rel="noopener">Segui Caritas opitergina su Threads</a></p>
+      {%- endif %}
+    </aside>
+    {%- endif %}
   </div>
 </section>
