@@ -1,0 +1,31 @@
+---
+layout: default
+title: Rassegna stampa
+description: "Articoli di giornale che parlano di Caritas opitergina – Centro di Ascolto ODV e del suo lavoro a Oderzo."
+---
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <h1>Rassegna stampa</h1>
+    <p class="lead">Gli articoli che i giornali hanno dedicato al nostro lavoro.</p>
+  </div>
+</section>
+
+<section style="padding-top: 8px;">
+  <div class="wrap">
+    <div class="cs-list">
+      {%- for a in site.data.rassegna %}
+      <article class="cs-entry">
+        <div>
+          {% include data-it.html data=a.data %}
+          <span class="cs-tag">{{ a.testata }}</span>
+        </div>
+        <div>
+          <h2><a href="{{ a.link }}" target="_blank" rel="noopener">{{ a.titolo }}</a></h2>
+          <p>{{ a.sintesi }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="small-note" style="margin-top: 18px;">Gli articoli si aprono sul sito della testata in un’altra scheda. Per i servizi televisivi e i video vedi la pagina <a href="/video.html">Video</a>.</p>
+  </div>
+</section>

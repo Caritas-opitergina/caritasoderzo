@@ -210,6 +210,8 @@ nav.main a {
   font-weight: 500;
   border-bottom: 2px solid transparent;
   padding-bottom: 3px;
+  white-space: nowrap;
+  display: inline-block;
 }
 nav.main a:hover,
 nav.main a[aria-current="page"] {
@@ -508,9 +510,9 @@ footer.site .legal a { color: inherit; }
 .cs-article .cs-body ul:not(.cs-data) { padding-left: 1.2em; margin: 0 0 1.3em; }
 .cs-article .cs-body ul:not(.cs-data) li { margin-bottom: 0.6em; line-height: 1.6; }
 
-/* Home: colonna principale + colonna Threads a destra */
+/* Home: colonna principale + colonna a destra (logo e post Threads) */
 .home-main { padding-top: 8px; }
-.home-grid.con-threads {
+.home-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 48px;
@@ -528,6 +530,14 @@ footer.site .legal a { color: inherit; }
   margin-top: 8px;
 }
 .home-sostieni p:last-child { margin-bottom: 0; }
+
+.home-logo {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  margin: 32px auto 36px;
+}
 
 .threads-col {
   border-top: 3px solid var(--pine);
@@ -576,5 +586,7 @@ footer.site .legal a { color: inherit; }
 .th-segui { font-size: 0.92rem; }
 
 @media (max-width: 820px) {
-  .home-grid.con-threads { grid-template-columns: 1fr; gap: 16px; }
+  .home-grid { display: flex; flex-direction: column; gap: 16px; }
+  .home-side { display: contents; }
+  .home-logo { display: none; }
 }
