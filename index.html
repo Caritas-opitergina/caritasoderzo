@@ -3,7 +3,8 @@ layout: "default"
 description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concreti e case per chi vive un momento di difficoltà a Oderzo, Fontanelle, Mansuè e Portobuffolè. Volontari al servizio del territorio dal 1994."
 ---
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
     <p class="kicker">Forania di Oderzo — dal 1994</p>
     <h1>Ascolto e aiuto concreto per chi attraversa un momento difficile.</h1>
     <p class="lead">Caritas opitergina – Centro di Ascolto ODV è il punto di riferimento per chi vive un momento di difficoltà a Oderzo, Fontanelle, Mansuè e Portobuffolè. Ascoltiamo, accompagniamo e offriamo risposte concrete: un lavoro silenzioso, fatto da volontari.</p>
@@ -11,13 +12,15 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
       <a class="btn btn-primary" href="contatti.html">Contattaci</a>
       <a class="btn btn-ghost" href="servizi.html">Scopri i servizi</a>
     </div>
+    </div>
+    <img class="hero-logo" src="/assets/logo-caritas-home.png" alt="Caritas opitergina" width="480" height="512">
   </div>
 </section>
 
 {%- assign threads_post = site.data.threads.post | slice: 0, 3 -%}
 {%- comment -%} Per mostrare 5 post invece di 3, cambiare il 3 qui sopra {%- endcomment -%}
 <section class="home-main">
-  <div class="wrap home-grid">
+  <div class="wrap home-grid{% if threads_post.size > 0 %} con-threads{% endif %}">
     <div class="home-col">
       <div class="home-block">
         <h2>Chi siamo</h2>
@@ -40,8 +43,6 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
         <p class="small-note">La donazione si fa sulla pagina sicura di Donorbox, che si apre in una nuova scheda.</p>
       </div>
     </div>
-    <div class="home-side">
-      <img class="home-logo" src="/assets/logo-caritas-home.png" alt="Caritas opitergina" width="480" height="512">
     {%- if threads_post.size > 0 %}
 
     <aside class="threads-col" aria-labelledby="threads-titolo">
@@ -68,6 +69,5 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
       {%- endif %}
     </aside>
     {%- endif %}
-    </div>
   </div>
 </section>

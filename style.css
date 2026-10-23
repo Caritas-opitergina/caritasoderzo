@@ -234,6 +234,20 @@ nav.main { margin-left: -26px; }
   color: var(--ink-soft);
   max-width: 560px;
 }
+/* Home: logo a destra del titolo, allineato alla colonna Threads */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 48px;
+  align-items: center;
+}
+.hero-logo {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+}
 
 /* Buttons */
 .btn {
@@ -510,9 +524,9 @@ footer.site .legal a { color: inherit; }
 .cs-article .cs-body ul:not(.cs-data) { padding-left: 1.2em; margin: 0 0 1.3em; }
 .cs-article .cs-body ul:not(.cs-data) li { margin-bottom: 0.6em; line-height: 1.6; }
 
-/* Home: colonna principale + colonna a destra (logo e post Threads) */
+/* Home: colonna principale + colonna Threads a destra */
 .home-main { padding-top: 8px; }
-.home-grid {
+.home-grid.con-threads {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 48px;
@@ -530,14 +544,6 @@ footer.site .legal a { color: inherit; }
   margin-top: 8px;
 }
 .home-sostieni p:last-child { margin-bottom: 0; }
-
-.home-logo {
-  display: block;
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-  margin: 32px auto 36px;
-}
 
 .threads-col {
   border-top: 3px solid var(--pine);
@@ -586,7 +592,7 @@ footer.site .legal a { color: inherit; }
 .th-segui { font-size: 0.92rem; }
 
 @media (max-width: 820px) {
-  .home-grid { display: flex; flex-direction: column; gap: 16px; }
-  .home-side { display: contents; }
-  .home-logo { display: none; }
+  .home-grid.con-threads { grid-template-columns: 1fr; gap: 16px; }
+  .hero-grid { display: block; }
+  .hero-logo { display: none; }
 }
