@@ -1,0 +1,37 @@
+# Elenco degli articoli della pagina /rassegna-stampa.html, dal più recente al più vecchio.
+# Per aggiungere un articolo basta copiare un blocco e cambiare i campi.
+# data: AAAA-MM-GG (data di pubblicazione dell'articolo)
+# sintesi: una o due frasi scritte da noi, NON copiate dall'articolo.
+# Criteri: solo testate giornalistiche, niente articoli a pagamento,
+# niente articoli che riprendono pari pari i nostri comunicati.
+# Attenzione: se un testo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
+
+- data: 2026-04-12
+  testata: QdP News
+  titolo: "L’impegno di Caritas Opitergina nell’emergenza abitativa: le testimonianze di Kin e Abdelkader"
+  link: https://www.qdpnews.it/comuni/opitergino-mottense/limpegno-di-caritas-opitergina-nellemergenza-abitativa-le-testimonianze-di-kin-e-abdelkader/
+  sintesi: "Perché la casa è oggi il bisogno più difficile a cui rispondere, raccontato da una volontaria e da due persone accolte nelle nostre strutture."
+
+- data: 2026-04-11
+  testata: QdP News
+  titolo: "Dietro ogni richiesta, una storia: il lavoro del Centro di ascolto della Caritas opitergina"
+  link: https://www.qdpnews.it/comuni/opitergino-mottense/dietro-ogni-richiesta-una-storia-il-lavoro-del-centro-di-ascolto-della-caritas-opitergina/
+  sintesi: "Come funziona il Centro di Ascolto, chi incontriamo e cosa offriamo, con i numeri del 2025 e i progetti di Abitare solidale."
+
+- data: 2025-01-24
+  testata: OggiTreviso
+  titolo: "Inaugurata la Casa San Floriano a Oderzo"
+  link: https://www.oggitreviso.it/inaugurata-casa-san-floriano-oderzo-au23899-348512
+  sintesi: "L’apertura della seconda casa per l’emergenza abitativa, con quattro posti letto, alla presenza del vescovo."
+
+- data: 2024-11-12
+  testata: OggiTreviso
+  titolo: "Oderzo, emergenza casa: l'allarme di Caritas"
+  link: https://www.oggitreviso.it/oderzo-emergenza-casa-lallarme-di-caritas-au23899-344264
+  sintesi: "Le richieste di accoglienza in continua crescita, Casa San Tiziano al completo e l’appello a istituzioni e imprenditori."
+
+- data: 2024-11-12
+  testata: TrevisoToday
+  titolo: "Allarme emergenza abitativa, la Caritas di Oderzo: «Le istituzioni facciano la loro parte»"
+  link: https://www.trevisotoday.it/attualita/oderzo-migranti-caritas-12-novembre-2024.html
+  sintesi: "Il nostro allarme sulle persone senza casa nel territorio, letto alla luce degli sgomberi avvenuti nello stesso periodo a Treviso."
