@@ -550,6 +550,18 @@ footer.site .legal a { color: inherit; }
   padding-top: 24px;
 }
 .threads-col h2 { font-size: 1.3rem; margin-bottom: 18px; }
+.social-icone {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: -4px 0 22px;
+  padding: 0;
+}
+.social-icone a { display: block; line-height: 0; }
+.social-icone svg { fill: var(--brick); transition: fill .15s; }
+.social-icone a:hover svg, .social-icone a:focus-visible svg { fill: var(--brick-deep); }
+.cei-widget { margin-top: 28px; }
+.cei-widget:empty { display: none; }
 .th-post {
   display: grid;
   grid-template-columns: 76px minmax(0, 1fr);
