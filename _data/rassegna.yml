@@ -1,7 +1,7 @@
 # Elenco degli articoli della pagina /rassegna-stampa.html, dal più recente al più vecchio.
 # Per aggiungere un articolo basta copiare un blocco e cambiare i campi.
-# data: AAAA-MM-GG (data di pubblicazione dell'articolo)
-# sintesi: una o due frasi scritte da noi, NON copiate dall'articolo.
+# data: AAAA-MM-GG (data di pubblicazione dell’articolo)
+# sintesi: una o due frasi scritte da noi, NON copiate dall’articolo.
 # Criteri: solo testate giornalistiche, niente articoli a pagamento,
 # niente articoli che riprendono pari pari i nostri comunicati.
 # Attenzione: se un testo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
@@ -26,7 +26,7 @@
 
 - data: 2024-11-12
   testata: OggiTreviso
-  titolo: "Oderzo, emergenza casa: l'allarme di Caritas"
+  titolo: "Oderzo, emergenza casa: l’allarme di Caritas"
   link: https://www.oggitreviso.it/oderzo-emergenza-casa-lallarme-di-caritas-au23899-344264
   sintesi: "Le richieste di accoglienza in continua crescita, Casa San Tiziano al completo e l’appello a istituzioni e imprenditori."
 

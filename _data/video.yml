@@ -1,7 +1,7 @@
 # Elenco dei video della pagina /video.html, dal più recente al più vecchio.
 # Per aggiungere un video YouTube basta copiare un blocco e cambiare id, titolo e descrizione.
-# L'id è la parte dopo "watch?v=" nel link di YouTube.
-# Per video che non sono su YouTube si usa "link" al posto di "id" (si apre sul sito d'origine).
+# L’id è la parte dopo "watch?v=" nel link di YouTube.
+# Per video che non sono su YouTube si usa "link" al posto di "id" (si apre sul sito d’origine).
 # Attenzione: se il titolo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
 
 - id: _4W4lZfhAcs
@@ -14,10 +14,10 @@
   titolo: "Accordo tra ATER e Caritas opitergina: alloggio ad affitto calmierato a chi è in difficoltà"
   descrizione: "Servizio di Antenna Tre Veneto, Treviso, 29 settembre 2025"
 - id: rFcHxoR13hI
-  titolo: "Camminando nelle loro scarpe: trent'anni di Centro di Ascolto"
-  descrizione: "Spettacolo per i trent'anni del CdA di Oderzo, Oderzo, 4 maggio 2024"
+  titolo: "Camminando nelle loro scarpe: trent’anni di Centro di Ascolto"
+  descrizione: "Spettacolo per i trent’anni del CdA di Oderzo, Oderzo, 4 maggio 2024"
 - id: iT5TiFYccBw
-  titolo: "Quello che non si vede: quale futuro per l'Africa"
+  titolo: "Quello che non si vede: quale futuro per l’Africa"
   descrizione: "Incontro con don Dante Carraro al teatro Turroni, Oderzo, 7 ottobre 2023"
 - id: QzvfSHBAoNo
   titolo: 'Presentazione del libro "Gesù il figlio del falegname"'
