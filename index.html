@@ -41,6 +41,32 @@ description: "Caritas opitergina – Centro di Ascolto ODV: ascolto, aiuti concr
         <p><a class="btn btn-primary" href="https://donorbox.org/sostieni-caritas-opitergina" target="_blank" rel="noopener">Dona ora</a></p>
         <p class="small-note">La donazione si fa sulla pagina sicura di Donorbox, che si apre in una nuova scheda.</p>
       </div>
+      {%- assign rete_ok = false %}
+      {%- for f in site.data.rete_caritas.fonti %}{% if f.post.size > 0 %}{% assign rete_ok = true %}{% endif %}{% endfor %}
+      {%- if rete_ok %}
+
+      <div class="home-block home-rete">
+        <h2>Dalla rete Caritas</h2>
+        <div class="rete-grid">
+          {%- for f in site.data.rete_caritas.fonti %}
+          {%- if f.post.size > 0 %}
+          <section class="rete-fonte" aria-labelledby="rete-{{ f.id }}">
+            <h3 id="rete-{{ f.id }}"><a href="{{ f.sito }}" target="_blank" rel="noopener">{{ f.nome }}</a></h3>
+            <ul class="rete-lista">
+              {%- for p in f.post %}
+              <li>
+                <a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.titolo | escape }}</a>
+                <span class="rete-data">{% include data-it.html data=p.data %}</span>
+              </li>
+              {%- endfor %}
+            </ul>
+          </section>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+        <p class="small-note">Gli articoli si aprono sui siti originali, in una nuova scheda.</p>
+      </div>
+      {%- endif %}
     </div>
     {%- if threads_post.size > 0 %}
 
