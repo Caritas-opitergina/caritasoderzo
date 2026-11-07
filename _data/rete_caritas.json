@@ -1,0 +1,48 @@
+{
+  "fonti": [
+    {
+      "id": "italiana",
+      "nome": "Caritas Italiana",
+      "sito": "https://www.caritas.it/",
+      "post": [
+        {
+          "titolo": "Manovra 2027, Caritas Italiana: “Servono scelte strutturali, equità fiscale e una sanità per tutti”",
+          "link": "https://www.caritas.it/manovra-2027-caritas-italiana-servono-scelte-strutturali-equita-fiscale-e-una-sanita-per-tutti/",
+          "data": "2026-10-31 09:42:36 +0100"
+        },
+        {
+          "titolo": "Indonesia, terremoto a Flores: Caritas promuove un recupero inclusivo",
+          "link": "https://www.caritas.it/indomesia-terremoto-a-flores-caritas-promuove-un-recupero-inclusivo/",
+          "data": "2026-10-30 11:17:45 +0100"
+        },
+        {
+          "titolo": "Alluvione in Nepal, due mesi dopo",
+          "link": "https://www.caritas.it/alluvione-in-nepal-due-mesi-dopo/",
+          "data": "2026-10-29 10:32:49 +0100"
+        }
+      ]
+    },
+    {
+      "id": "vittorio-veneto",
+      "nome": "Caritas Vittorio Veneto",
+      "sito": "https://www.caritasvittorioveneto.it/",
+      "post": [
+        {
+          "titolo": "Al via il rilancio di “Metti in moto la carità”, la raccolta fondi de La Fondazione Caritas Vittorio Veneto Ets",
+          "link": "https://www.caritasvittorioveneto.it/2026/11/04/metti-in-moto-la-carita-la-raccolta-fondi-de-de-la-fondazione-caritas-vittorio-veneto-ets-si-rilancia/",
+          "data": "2026-11-04 14:00:13 +0100"
+        },
+        {
+          "titolo": "Migrazioni, il Triveneto si interroga: «Non un’emergenza, ma una realtà da comprendere»",
+          "link": "https://www.caritasvittorioveneto.it/2026/10/09/migrazioni-il-triveneto-si-interroga-non-unemergenza-ma-una-realta-da-comprendere/",
+          "data": "2026-10-09 17:54:49 +0200"
+        },
+        {
+          "titolo": "Metti in moto la carità: una raccolta fondi de La Fondazione Caritas Vittorio Veneto Ets",
+          "link": "https://www.caritasvittorioveneto.it/2026/10/08/metti-in-moto-la-carita-una-raccolta-fondi-de-la-fondazione-caritas-vittorio-veneto-ets/",
+          "data": "2026-10-08 10:26:55 +0200"
+        }
+      ]
+    }
+  ]
+}
