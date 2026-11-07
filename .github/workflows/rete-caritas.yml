@@ -1,0 +1,45 @@
+# Aggiorna gli ultimi articoli di Caritas Italiana e Caritas Vittorio Veneto mostrati in home
+name: Aggiorna notizie rete Caritas
+
+on:
+  schedule:
+    - cron: "47 5,16 * * *"   # due volte al giorno (orario UTC), sfasato rispetto a Threads
+  workflow_dispatch:           # avvio manuale da tab Actions
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: rete-caritas-sync
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Leggi i feed RSS
+        run: python _scripts/rete_caritas_sync.py
+
+      - name: Pubblica se ci sono novità
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add _data/rete_caritas.json
+          if git diff --cached --quiet; then
+            echo "Niente da pubblicare."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Rete Caritas: aggiornati gli articoli in home"
+          git pull --rebase
+          git push
+          # Chiede a GitHub Pages di ricostruire il sito
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
