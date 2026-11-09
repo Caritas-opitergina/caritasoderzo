@@ -486,7 +486,6 @@ footer.site .legal {
 }
 
 /* Video */
-.video-note { margin-bottom: 22px; }
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
