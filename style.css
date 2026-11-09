@@ -184,23 +184,20 @@ header.site .wrap {
 }
 .brand-logo {
   display: block;
-  height: 56px;
+  height: 62px;
   width: auto;
 }
-.wordmark {
+/* Sottotitolo accanto al logo: una riga su desktop, due su mobile (con "TV" al posto di "Treviso") */
+.brand-sub {
   font-family: 'Source Serif 4', serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--pine-deep);
-  text-decoration: none;
-  line-height: 1.25;
-}
-.wordmark span {
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3;
   color: var(--ink-soft);
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
 }
+.brand-sub br, .brand-sub .prov-breve { display: none; }
+.brand-sub abbr { text-decoration: none; }
 
 nav.main a {
   color: var(--ink);
@@ -355,6 +352,13 @@ footer.site .legal {
   .service-item { grid-template-columns: 1fr; gap: 6px; }
   .contact-grid, .addr-grid { grid-template-columns: 1fr; }
   .brand-logo { height: 44px; }
+  .brand-sub { font-size: 0.75rem; white-space: nowrap; }
+  .brand-sub .sep, .brand-sub .prov-lungo { display: none; }
+  .brand-sub br, .brand-sub .prov-breve { display: inline; }
+}
+@media (max-width: 360px) {
+  .brand { gap: 8px; }
+  .brand-sub { padding-left: 8px; }
 }
 
 /* Comunicati stampa — elenco */
