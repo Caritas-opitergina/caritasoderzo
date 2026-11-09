@@ -516,6 +516,18 @@ footer.site .legal {
 .video-play:hover .video-icon, .video-out:hover .video-icon { background: var(--brick-deep); }
 .video-play:focus-visible, .video-out:focus-visible { outline: 3px solid var(--ochre); outline-offset: -3px; }
 .video-label { font-weight: 600; font-size: 0.95rem; }
+/* Con il fotogramma: pulsante piccolo in basso a sinistra, per non coprire i volti */
+.video-thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-thumb ~ .video-play, .video-thumb ~ .video-out {
+  z-index: 1; flex-direction: row; align-items: flex-end; justify-content: flex-start;
+  gap: 10px; padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0) 45%);
+}
+.video-thumb ~ * .video-icon { width: 44px; height: 44px; font-size: 1rem; }
+.video-thumb ~ * .video-label {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  line-height: 1.25; min-height: 44px; display: flex; align-items: center; text-align: left;
+}
 
 /* Privacy */
 .privacy .wrap > * { max-width: var(--max-w); }

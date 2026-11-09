@@ -2,27 +2,36 @@
 # Per aggiungere un video YouTube basta copiare un blocco e cambiare id, titolo e descrizione.
 # L’id è la parte dopo "watch?v=" nel link di YouTube.
 # Per video che non sono su YouTube si usa "link" al posto di "id" (si apre sul sito d’origine).
+# "immagine" è il nome del fotogramma in assets/video/ (800x450, WebP o JPG): se manca, compare il riquadro verde.
+# Le immagini vanno scaricate e messe nel sito: non collegarle a YouTube, la pagina non deve contattarlo prima del clic.
 # Attenzione: se il titolo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
 
 - id: _4W4lZfhAcs
+  immagine: _4W4lZfhAcs.webp
   titolo: "Dietro ogni richiesta, una storia: il lavoro del Centro di ascolto della Caritas opitergina"
   descrizione: "Video di QDPnews, Oderzo, 11 aprile 2026"
 - id: C2BVpL2SIX0
+  immagine: C2BVpL2SIX0.webp
   titolo: "L’impegno di Caritas opitergina nell’emergenza abitativa: le testimonianze di Kin e Abdelkader"
   descrizione: "Video di QDPnews, Oderzo, 11 aprile 2026"
 - id: ueI6CEbCSXw
+  immagine: ueI6CEbCSXw.webp
   titolo: "Accordo tra ATER e Caritas opitergina: alloggio ad affitto calmierato a chi è in difficoltà"
   descrizione: "Servizio di Antenna Tre Veneto, Treviso, 29 settembre 2025"
 - id: rFcHxoR13hI
+  immagine: rFcHxoR13hI.webp
   titolo: "Camminando nelle loro scarpe: trent’anni di Centro di Ascolto"
   descrizione: "Spettacolo per i trent’anni del CdA di Oderzo, Oderzo, 4 maggio 2024"
 - id: iT5TiFYccBw
+  immagine: iT5TiFYccBw.webp
   titolo: "Quello che non si vede: quale futuro per l’Africa"
   descrizione: "Incontro con don Dante Carraro al teatro Turroni, Oderzo, 7 ottobre 2023"
 - id: QzvfSHBAoNo
+  immagine: QzvfSHBAoNo.webp
   titolo: 'Presentazione del libro "Gesù il figlio del falegname"'
   descrizione: "Con mons. Renato De Zan, Oderzo, 20 gennaio 2023"
 - link: https://www.rainews.it/tgr/veneto/video/2021/04/ven-Veneto-Oderzo-nuove-poverta-lavoro-della-Caritas-c90c95b4-a322-4105-8263-3dd38828c667.html
   fonte: RaiNews – TGR Veneto
+  immagine: rai-tgr-2021.webp
   titolo: "Oderzo, nuove povertà: il lavoro della Caritas"
   descrizione: "Servizio del TGR Veneto, aprile 2021."

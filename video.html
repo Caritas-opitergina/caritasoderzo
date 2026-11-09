@@ -18,6 +18,9 @@ description: "Servizi televisivi e video che raccontano il lavoro di Caritas opi
       <article class="video-card">
         {%- if v.id %}
         <div class="video-frame" data-id="{{ v.id }}">
+          {%- if v.immagine %}
+          <img class="video-thumb" src="/assets/video/{{ v.immagine }}" alt="" width="800" height="450" loading="lazy">
+          {%- endif %}
           <button type="button" class="video-play" aria-label="Guarda il video: {{ v.titolo | escape }}">
             <span class="video-icon" aria-hidden="true">▶</span>
             <span class="video-label">Guarda</span>
@@ -25,6 +28,9 @@ description: "Servizi televisivi e video che raccontano il lavoro di Caritas opi
         </div>
         {%- else %}
         <div class="video-frame">
+          {%- if v.immagine %}
+          <img class="video-thumb" src="/assets/video/{{ v.immagine }}" alt="" width="800" height="450" loading="lazy">
+          {%- endif %}
           <a class="video-out" href="{{ v.link }}" target="_blank" rel="noopener">
             <span class="video-icon" aria-hidden="true">▶</span>
             <span class="video-label">Guarda su {{ v.fonte }}</span>
