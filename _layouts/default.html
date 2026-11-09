@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% seo %}
+{% seo title=false %}
+{%- comment -%} titolo_seo: versione breve per il <title> quando il titolo + " | Caritas opitergina" supera 70 caratteri {%- endcomment %}
+<title>{% if page.titolo_seo %}{{ page.titolo_seo | escape }} | {{ site.title }}{% elsif page.title %}{{ page.title | escape }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
 {% feed_meta %}
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
