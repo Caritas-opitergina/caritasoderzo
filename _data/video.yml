@@ -3,11 +3,12 @@
 # L’id è la parte dopo "watch?v=" nel link di YouTube.
 # Per video che non sono su YouTube si usa "link" al posto di "id" (si apre sul sito d’origine).
 # "immagine" è il nome del fotogramma in assets/video/ (800x450, WebP o JPG): se manca, compare il riquadro verde.
+# Il nome del file non deve iniziare con "_" (Jekyll non pubblica quei file): se l’id inizia con "_", toglilo dal nome.
 # Le immagini vanno scaricate e messe nel sito: non collegarle a YouTube, la pagina non deve contattarlo prima del clic.
 # Attenzione: se il titolo contiene virgolette doppie, racchiuderlo tra apici singoli ('...').
 
 - id: _4W4lZfhAcs
-  immagine: _4W4lZfhAcs.webp
+  immagine: 4W4lZfhAcs.webp
   titolo: "Dietro ogni richiesta, una storia: il lavoro del Centro di ascolto della Caritas opitergina"
   descrizione: "Video di QDPnews, Oderzo, 11 aprile 2026"
 - id: C2BVpL2SIX0
