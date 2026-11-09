@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Caritas opitergina – Centro di Ascolto ODV
+
+> Organizzazione di volontariato di Oderzo (TV), nata formalmente nel 1994. Fa capo alla parrocchia di San Giovanni Battista di Oderzo e alla Caritas diocesana di Vittorio Veneto. Offre ascolto, aiuti concreti e accoglienza a chi vive un momento di difficoltà nella forania di Oderzo: Oderzo, Fontanelle, Mansuè e Portobuffolè.
+
+- Il nome si scrive “Caritas opitergina”, con la “o” minuscola. “Opitergina” vuol dire “di Oderzo” (dal latino Opitergium).
+- RUNTS n. 96793 – C.F. 94029790261
+- Sede legale: Via Postumia 6, 31046 Oderzo (TV). Sede operativa: Piazzale Turroni 1, Oderzo.
+- Email: cda.oderzo@gmail.com – per la stampa: caritasoderzo@gmail.com
+- La distribuzione alimentare è gestita dalla Società San Vincenzo De Paoli – Conferenza San Tiziano di Oderzo, non da Caritas opitergina.
+- Il servizio mobili usati è chiuso a tempo indeterminato.
+- Orari e recapiti cambiano: fa fede sempre la pagina Contatti.
+
+## Pagine principali
+
+- [Home]({{ "/" | absolute_url }}): chi siamo, cosa facciamo, come sostenerci
+- [Servizi]({{ "/servizi.html" | absolute_url }}): Centro di Ascolto, servizio indumenti, farmaci da banco, distribuzione alimentare, Abitare Solidale
+- [Contatti]({{ "/contatti.html" | absolute_url }}): sedi, orari di apertura, recapiti dei servizi e canali
+- [Borse di studio]({{ "/borse-di-studio.html" | absolute_url }}): borse di studio “Caterina De Luca” per studenti delle superiori residenti a Oderzo
+- [Notizie e approfondimenti]({{ "/notizie.html" | absolute_url }}): comunicati stampa e approfondimenti
+- [Rassegna stampa]({{ "/rassegna-stampa.html" | absolute_url }}): articoli di giornale su Caritas opitergina
+- [Video]({{ "/video.html" | absolute_url }}): servizi televisivi e video sul nostro lavoro
+
+## Notizie
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description }}
+{%- endfor %}
+
+## Sostenerci
+
+- [Donazioni su Donorbox](https://donorbox.org/sostieni-caritas-opitergina)
+- 5x1000: codice fiscale 94029790261 nella dichiarazione dei redditi
+
+## Optional
+
+- [Privacy]({{ "/privacy.html" | absolute_url }}): informativa sul trattamento dei dati
+- [Feed notizie]({{ "/feed.xml" | absolute_url }})
+- [Tutti i canali (lnk.bio)](https://lnk.bio/caritas.oderzo): Facebook, Instagram, Threads, canale WhatsApp
