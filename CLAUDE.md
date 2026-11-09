@@ -33,6 +33,7 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 - Notizie in `_posts/AAAA-MM-GG-titolo.html`, con front matter `title`, `tipo` (es. "Comunicato stampa"), `description`, `sommario`. URL: `/notizie/AAAA-MM-GG-titolo.html`.
 - I vecchi indirizzi `/comunicati/...` restano attivi con `redirect_from`: non toglierli.
 - Sitemap, feed e meta SEO sono generati dai plugin Jekyll (`jekyll-sitemap`, `jekyll-feed`, `jekyll-seo-tag`, `jekyll-redirect-from`).
+- `llms.txt` (root): file per i motori di IA, processato da Jekyll. L’elenco delle notizie si aggiorna da solo; pagine principali e dati fissi (email, sedi, Donorbox, servizi) sono scritti a mano.
 - `style.css`, con variabili colore: `--brick #ac2c29`, `--ochre #edb230`, `--ink #332e32`, `--pine #1f4741`, sfondo `--paper #f2efe4`. Font self-hosted in `assets/fonts/` (Source Serif 4, Public Sans).
 
 ## Regole sui contenuti
@@ -52,6 +53,7 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 - Comunicato Ex Caserma Zanusso del 25/9/2026: resta com'è.
 - Borse di studio Caterina De Luca: non aggiungere la data di morte né il numero totale di edizioni previste (non confermati).
 - Dopo ogni modifica a recapiti o orari, ricorda che va aggiornato anche **lnk.bio** (lnk.bio/caritas.oderzo).
+- Se aggiungi, togli o rinomini una pagina, o cambiano recapiti, sedi, link Donorbox o servizi, aggiorna anche **`llms.txt`**. Nelle notizie compila sempre bene la `description`: finisce in `llms.txt`.
 
 ## Privacy e servizi esterni
 
