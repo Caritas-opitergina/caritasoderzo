@@ -34,7 +34,7 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 - I vecchi indirizzi `/comunicati/...` restano attivi con `redirect_from`: non toglierli.
 - Sitemap, feed e meta SEO sono generati dai plugin Jekyll (`jekyll-sitemap`, `jekyll-feed`, `jekyll-seo-tag`, `jekyll-redirect-from`).
 - `llms.txt` (root): file per i motori di IA, processato da Jekyll. L’elenco delle notizie si aggiorna da solo; pagine principali e dati fissi (email, sedi, Donorbox, servizi) sono scritti a mano.
-- `style.css`, con variabili colore: `--brick #ac2c29`, `--ochre #edb230`, `--ink #332e32`, `--pine #1f4741`, sfondo `--paper #f2efe4`. Font self-hosted in `assets/fonts/` (Source Serif 4, Public Sans).
+- `style.scss` (pubblicato da Jekyll come `/style.css` minimizzato: si modifica solo `style.scss`, non creare un `style.css` nella root), con variabili colore: `--brick #ac2c29`, `--ochre #edb230`, `--ink #332e32`, `--pine #1f4741`, sfondo `--paper #f2efe4`. Font self-hosted in `assets/fonts/` (Source Serif 4, Public Sans).
 
 ## Regole sui contenuti
 

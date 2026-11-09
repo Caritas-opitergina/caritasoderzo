@@ -18,6 +18,10 @@ defaults:
       permalink: /notizie/:year-:month-:day-:title.html
       layout: post
 
+# CSS: style.scss viene pubblicato come /style.css minimizzato
+sass:
+  style: compressed
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
