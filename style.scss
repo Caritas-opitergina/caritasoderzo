@@ -562,6 +562,38 @@ footer.site .legal a { color: inherit; }
   margin-top: 8px;
 }
 .home-sostieni p:last-child { margin-bottom: 0; }
+/* IBAN: gruppi da 4 caratteri separati solo visivamente, così il testo copiato resta senza spazi */
+.iban-box {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.iban-intestazione { margin-bottom: 6px; }
+.iban { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.iban-sigla { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); }
+.iban-num {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  user-select: all;
+}
+.iban-num span + span { margin-left: 0.45em; }
+.iban-copia {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brick);
+  background: transparent;
+  border: 1px solid var(--brick);
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.iban-copia:hover { color: #fff; background: var(--brick); }
+.iban-copia:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .iban-num { font-size: 0.88rem; }
+}
 
 .threads-col h2 {
   font-size: 1.3rem;
@@ -579,6 +611,11 @@ footer.site .legal a { color: inherit; }
 .social-icone a { display: block; line-height: 0; }
 .social-icone svg { fill: var(--brick); transition: fill .15s; }
 .social-icone a:hover svg, .social-icone a:focus-visible svg { fill: var(--brick-deep); }
+/* Nel footer: icone più piccole e bianche */
+footer.site .social-icone-footer { gap: 14px; margin: 14px 0 0; }
+footer.site .social-icone-footer svg { fill: #fff; }
+footer.site .social-icone-footer a:hover svg,
+footer.site .social-icone-footer a:focus-visible svg { fill: var(--ochre); }
 .cei-widget { margin-top: 28px; }
 .cei-widget:empty { display: none; }
 .th-post {
@@ -646,10 +683,13 @@ footer.site .legal a { color: inherit; }
 }
 .rete-lista li > a { display: block; font-size: 0.95rem; font-weight: 500; overflow-wrap: anywhere; }
 .rete-data { display: block; font-size: 0.82rem; color: var(--ink-soft); margin-top: 3px; }
-.home-rete .small-note { margin: 8px 0 0; }
-
 @media (max-width: 820px) {
-  .home-grid.con-threads { grid-template-columns: 1fr; gap: 16px; }
+  .home-grid.con-threads { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  /* Su mobile i social e le "Notizie brevi" vanno tra "Sostienici" e "Dalla rete Caritas" */
+  .home-grid.con-threads .home-col { display: contents; }
+  .home-grid.con-threads .home-col > * { order: 1; }
+  .home-grid.con-threads .threads-col { order: 2; margin-top: 32px; }
+  .home-grid.con-threads .home-col > .home-rete { order: 3; margin-top: 16px; }
   .hero-grid { display: block; }
   .hero-logo { display: none; }
 }
