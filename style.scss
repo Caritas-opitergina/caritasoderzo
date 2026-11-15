@@ -531,6 +531,19 @@ footer.site .legal {
   line-height: 1.25; min-height: 44px; display: flex; align-items: center; text-align: left;
 }
 
+/* La nostra storia */
+.storia-logo {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  margin-bottom: 28px;
+}
+.storia .wrap > * { max-width: var(--max-w); }
+.storia h2 { margin-top: 1.6em; }
+.storia .wrap > h2:first-child { margin-top: 0; }
+.storia .btn { margin-top: 8px; }
+
 /* Privacy */
 .privacy .wrap > * { max-width: var(--max-w); }
 .privacy h2 { margin-top: 1.6em; }

@@ -27,7 +27,7 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 
 ## Struttura
 
-- Pagine: `index.html`, `servizi.html`, `contatti.html`, `notizie.html`, `borse-di-studio.html`, `video.html`, `rassegna-stampa.html`, `privacy.html`.
+- Pagine: `index.html`, `servizi.html`, `contatti.html`, `notizie.html`, `borse-di-studio.html`, `storia.html`, `video.html`, `rassegna-stampa.html`, `privacy.html`.
 - `_layouts/default.html` (header, menu, footer), `post.html` (articoli).
 - `_data/`: `menu.yml`, `video.yml`, `rassegna.yml`, `mesi.yml` + i file automatici sopra.
 - Notizie in `_posts/AAAA-MM-GG-titolo.html`, con front matter `title`, `tipo` (es. "Comunicato stampa"), `description`, `sommario`. Se `title` + " | Caritas opitergina" supera 70 caratteri, aggiungi `titolo_seo` (max 49 caratteri): cambia solo il `<title>` della pagina, il titolo visibile resta intatto. URL: `/notizie/AAAA-MM-GG-titolo.html`.
@@ -44,7 +44,7 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 - Tono diretto, informale, concreto. Niente linguaggio pietistico o agiografico.
 - Mai immagini di persone assistite.
 - Fondazione: "nati formalmente nel 1994".
-- Forania di Oderzo: comuni **Oderzo, Fontanelle, Mansuè, Portobuffolè**. Non aggiungere Ponte di Piave: la forania ne copre solo due frazioni.
+- Forania di Oderzo: comuni **Oderzo, Fontanelle, Mansuè, Portobuffolè**. Ponte di Piave non va elencato come comune intero (la forania ne copre solo due frazioni): si può scrivere "parte di Ponte di Piave".
 - Non usare "Casa della Carità" per la sede di Piazzale Turroni 1.
 - Non pubblicare i nomi delle agenzie immobiliari partner.
 - Abitare Solidale va tenuto in basso profilo: non dargli più risalto di quanto ne abbia ora.

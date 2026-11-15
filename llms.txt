@@ -18,6 +18,7 @@ sitemap: false
 ## Pagine principali
 
 - [Home]({{ "/" | absolute_url }}): chi siamo, cosa facciamo, come sostenerci
+- [La nostra storia]({{ "/storia.html" | absolute_url }}): dalle radici della carità a Oderzo (1931) alla nascita del Centro di Ascolto nel 1994, fino alle case e ai servizi di oggi; la collaborazione con la San Vincenzo
 - [Servizi]({{ "/servizi.html" | absolute_url }}): Centro di Ascolto, servizio indumenti, farmaci da banco, distribuzione alimentare, Abitare Solidale
 - [Contatti]({{ "/contatti.html" | absolute_url }}): sedi, orari di apertura, recapiti dei servizi e canali
 - [Borse di studio]({{ "/borse-di-studio.html" | absolute_url }}): borse di studio “Caterina De Luca” per studenti delle superiori residenti a Oderzo
