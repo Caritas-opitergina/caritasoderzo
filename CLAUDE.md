@@ -28,11 +28,10 @@ Il nome si scrive sempre **"Caritas opitergina"**, con la "o" minuscola.
 ## Struttura
 
 - Pagine: `index.html`, `servizi.html`, `contatti.html`, `notizie.html`, `borse-di-studio.html`, `video.html`, `rassegna-stampa.html`, `privacy.html`.
-- `_layouts/default.html` (header, menu, footer), `post.html` (articoli), `redirect.html`.
+- `_layouts/default.html` (header, menu, footer), `post.html` (articoli).
 - `_data/`: `menu.yml`, `video.yml`, `rassegna.yml`, `mesi.yml` + i file automatici sopra.
 - Notizie in `_posts/AAAA-MM-GG-titolo.html`, con front matter `title`, `tipo` (es. "Comunicato stampa"), `description`, `sommario`. Se `title` + " | Caritas opitergina" supera 70 caratteri, aggiungi `titolo_seo` (max 49 caratteri): cambia solo il `<title>` della pagina, il titolo visibile resta intatto. URL: `/notizie/AAAA-MM-GG-titolo.html`.
-- I vecchi indirizzi `/comunicati/...` restano attivi con `redirect_from`: non toglierli.
-- Sitemap, feed e meta SEO sono generati dai plugin Jekyll (`jekyll-sitemap`, `jekyll-feed`, `jekyll-seo-tag`, `jekyll-redirect-from`).
+- Sitemap, feed e meta SEO sono generati dai plugin Jekyll (`jekyll-sitemap`, `jekyll-feed`, `jekyll-seo-tag`).
 - `llms.txt` (root): file per i motori di IA, processato da Jekyll. L’elenco delle notizie si aggiorna da solo; pagine principali e dati fissi (email, sedi, Donorbox, servizi) sono scritti a mano.
 - `style.scss` (pubblicato da Jekyll come `/style.css` minimizzato: si modifica solo `style.scss`, non creare un `style.css` nella root), con variabili colore: `--brick #ac2c29`, `--ochre #edb230`, `--ink #332e32`, `--pine #1f4741`, sfondo `--paper #f2efe4`. Font self-hosted in `assets/fonts/` (Source Serif 4, Public Sans).
 
