@@ -1,0 +1,4 @@
+Bandiere degli Stati per SICO (Cosma) - Caritas opitergina
+250 file SVG, nominati con il codice ISO 3166-1 alfa-2 in minuscolo (ma.svg = Marocco; xk.svg = Kosovo).
+Fonte: github.com/hampusborgos/country-flags (file di Wikimedia Commons), pubblico dominio.
+Indirizzo previsto sul sito: https://caritasoderzo.org/bandiere/<codice>.svg
